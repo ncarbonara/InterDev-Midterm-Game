@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class StrayThoughtMovement : MonoBehaviour
 {
-
 	Rigidbody rbody;
 
-	public GameObject player;
+	GameObject player;
+
+	public GameObject thoughtObject;
 
 	public float distanceToCollect;
 
@@ -15,6 +16,8 @@ public class StrayThoughtMovement : MonoBehaviour
 	void Start ()
 	{
 		rbody = this.GetComponent<Rigidbody> ();
+
+		player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
@@ -24,7 +27,7 @@ public class StrayThoughtMovement : MonoBehaviour
 			&& Input.GetKey(KeyCode.Mouse0)) {
 			//	destroy thought;
 			// give player points or other goodies;
-			Destroy(this);
+			GameObject.Destroy(thoughtObject);
 		}
 	}
 
