@@ -9,6 +9,9 @@ public class ThoughtPulseScript : MonoBehaviour
 	//A prefab for the Thought object
 	public GameObject thought;
 
+	//The collider of the player, which this trigger script reacts to
+	public Collider playerCollider;
+
 	//The number of thoughts the trigger will spawn
 	public int numberOfThoughts;
 
@@ -31,7 +34,8 @@ public class ThoughtPulseScript : MonoBehaviour
 		
 	}
 
-	void OnTriggerEnter ()
+	//OnTriggerEnter only activates if it is being triggered by the player's collider
+	void OnTriggerEnter (Collider playerCollider)
 	{
 		//Causes the inspiration altert text to appear onscreen
 		inspirationAlertText.SetActive(true);
