@@ -4,7 +4,7 @@ using UnityEngine;
 
 //This script is used to cause a bunch of "Thought objects" for the player to collect
 //to appear when the player passes through the trigger and have become "inspired"
-public class ThoughtPulseScript : MonoBehaviour
+public class ThoughtPulseBehavior : MonoBehaviour
 {
 	//A prefab for the Thought object
 	public GameObject thought;
@@ -57,6 +57,6 @@ public class ThoughtPulseScript : MonoBehaviour
 		}
 
 		//Destroys the trigger once it has been used, so that it can't be used again
-		GameObject.Destroy (this);
+		this.gameObject.SetActive (false);
 	}
 }

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54137695332148082}
   - component: {fileID: 114733692393121884}
   m_Layer: 0
-  m_Name: Stray Thought
+  m_Name: Thought
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc4d1452bda4d845bcf37023083ebfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thoughtObject: {fileID: 1851388905660400}
   distanceToCollect: 2
+  timeToVanish: 5
