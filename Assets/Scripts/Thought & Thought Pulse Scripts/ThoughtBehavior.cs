@@ -9,8 +9,8 @@ public class ThoughtBehavior : MonoBehaviour
 	//The rigidbody of the thought object
 	Rigidbody rbody;
 
-	//The player character
-	GameObject player;
+	//The player character; Commented out, in case it's needed later in development
+	//GameObject player;
 
 	//The distance away from a thought object the player has to be
 	//in order to collect it
@@ -24,7 +24,8 @@ public class ThoughtBehavior : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		player = GameObject.Find ("Player");
+		//Commented out, in case it's needed later in development
+		//player = GameObject.Find ("Player");
 
 		rbody = this.GetComponent<Rigidbody> ();
 

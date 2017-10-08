@@ -10,9 +10,6 @@ public class PlayerMovement : MonoBehaviour {
 	public float gravityStrength;
 	public float speed;
 
-	//Checks to see if the player is running
-	bool runOn = false;
-
 	// Use this for initialization
 	void Start () {
 		rbody = GetComponent<Rigidbody> ();

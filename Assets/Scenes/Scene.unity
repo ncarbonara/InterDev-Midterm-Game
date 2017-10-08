@@ -401,7 +401,72 @@ Transform:
   m_LocalScale: {x: 5, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &253142269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 253142273}
+  - component: {fileID: 253142272}
+  - component: {fileID: 253142271}
+  - component: {fileID: 253142270}
+  m_Layer: 0
+  m_Name: Thought Pulse Trigger (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &253142270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253142269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thought: {fileID: 1851388905660400, guid: af8cab17b12343e46abd8cfd37b6c4d0, type: 2}
+  playerCollider: {fileID: 97994195}
+  numberOfThoughts: 5
+  inspirationAlertText: {fileID: 551195628}
+--- !u!65 &253142271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253142269}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &253142272
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253142269}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &253142273
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253142269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.65, y: 1.85, z: 2.97}
+  m_LocalScale: {x: 1.8356107, y: 8.152806, z: 1.8356107}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321066482
 GameObject:
@@ -477,30 +542,30 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321066482}
---- !u!1 &329150587
+--- !u!1 &399157626
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 329150591}
-  - component: {fileID: 329150590}
-  - component: {fileID: 329150589}
-  - component: {fileID: 329150588}
+  - component: {fileID: 399157630}
+  - component: {fileID: 399157629}
+  - component: {fileID: 399157628}
+  - component: {fileID: 399157627}
   m_Layer: 0
-  m_Name: Thought Pulse Trigger (3)
+  m_Name: Thought Pulse Trigger (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &329150588
+--- !u!114 &399157627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329150587}
+  m_GameObject: {fileID: 399157626}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
@@ -510,37 +575,37 @@ MonoBehaviour:
   playerCollider: {fileID: 97994195}
   numberOfThoughts: 5
   inspirationAlertText: {fileID: 551195628}
---- !u!65 &329150589
+--- !u!65 &399157628
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329150587}
+  m_GameObject: {fileID: 399157626}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &329150590
+--- !u!33 &399157629
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329150587}
+  m_GameObject: {fileID: 399157626}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &329150591
+--- !u!4 &399157630
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 329150587}
+  m_GameObject: {fileID: 399157626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.05, y: 1.85, z: 2.16}
-  m_LocalScale: {x: 7.65769, y: 3, z: 7.141925}
+  m_LocalPosition: {x: -13.82, y: 1.85, z: 5.09}
+  m_LocalScale: {x: 1.8356107, y: 8.152806, z: 1.8356107}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423339452
 GameObject:
@@ -725,7 +790,7 @@ Transform:
   m_LocalScale: {x: 14.705138, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543511984
 GameObject:
@@ -885,8 +950,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 545322530}
   m_LocalRotation: {x: 0.17214157, y: 0.59766024, z: -0.0024250867, w: 0.7830477}
-  m_LocalPosition: {x: 0.47, y: -0.23172393, z: 0.706}
-  m_LocalScale: {x: 0.22737563, y: 0.23453192, z: 0.040737305}
+  m_LocalPosition: {x: 0.47000122, y: -0.231724, z: 0.70599985}
+  m_LocalScale: {x: 0.2303602, y: 0.24254154, z: 0.041676637}
   m_Children: []
   m_Father: {fileID: 423339457}
   m_RootOrder: 0
@@ -1019,6 +1084,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbe568aa306290449bf59a3bd8c0cf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &667090268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 667090272}
+  - component: {fileID: 667090271}
+  - component: {fileID: 667090270}
+  - component: {fileID: 667090269}
+  m_Layer: 0
+  m_Name: Thought Pulse Trigger (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &667090269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667090268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thought: {fileID: 1851388905660400, guid: af8cab17b12343e46abd8cfd37b6c4d0, type: 2}
+  playerCollider: {fileID: 97994195}
+  numberOfThoughts: 5
+  inspirationAlertText: {fileID: 551195628}
+--- !u!65 &667090270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667090268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &667090271
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667090268}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &667090272
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667090268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.39, y: 1.85, z: -18.69}
+  m_LocalScale: {x: 1.8356107, y: 8.152806, z: 1.8356107}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &755932105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,10 +1177,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thoughtPulseTrigger0: {fileID: 899314121}
-  thoughtPulseTrigger1: {fileID: 1463848194}
-  thoughtPulseTrigger2: {fileID: 1964053078}
-  thoughtPulseTrigger3: {fileID: 329150587}
-  thoughtPulseTrigger4: {fileID: 2067146142}
+  thoughtPulseTrigger1: {fileID: 399157626}
+  thoughtPulseTrigger2: {fileID: 971975238}
+  thoughtPulseTrigger3: {fileID: 253142269}
+  thoughtPulseTrigger4: {fileID: 667090268}
   gameOverText: {fileID: 1254889111}
 --- !u!4 &755932107
 Transform:
@@ -1183,8 +1313,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 899314121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.85, z: 0}
-  m_LocalScale: {x: 5.405895, y: 5.4058957, z: 5.4058957}
+  m_LocalPosition: {x: 0, y: 1.85, z: -4.32}
+  m_LocalScale: {x: 1.8356107, y: 8.152806, z: 1.8356107}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1284,7 +1414,72 @@ Transform:
   m_LocalScale: {x: 9.2601185, y: 0.3211093, z: 25.049603}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &971975238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 971975242}
+  - component: {fileID: 971975241}
+  - component: {fileID: 971975240}
+  - component: {fileID: 971975239}
+  m_Layer: 0
+  m_Name: Thought Pulse Trigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &971975239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971975238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thought: {fileID: 1851388905660400, guid: af8cab17b12343e46abd8cfd37b6c4d0, type: 2}
+  playerCollider: {fileID: 97994195}
+  numberOfThoughts: 5
+  inspirationAlertText: {fileID: 551195628}
+--- !u!65 &971975240
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971975238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &971975241
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971975238}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &971975242
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971975238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.94, y: 1.85, z: 5.01}
+  m_LocalScale: {x: 1.8356107, y: 8.152806, z: 1.8356107}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &985328401
 GameObject:
@@ -1366,7 +1561,7 @@ Transform:
   m_LocalScale: {x: 22.240519, y: 10, z: 13.934949}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1091192393
 GameObject:
@@ -1450,7 +1645,7 @@ Transform:
   m_LocalScale: {x: 43.946873, y: 12.52321, z: 2.3499775}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1114461945
 GameObject:
@@ -1532,7 +1727,7 @@ Transform:
   m_LocalScale: {x: 2.2364788, y: 0.19620457, z: 2.9619768}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -8.9800005, y: 0, z: 0}
 --- !u!1 &1254889111
 GameObject:
@@ -1702,73 +1897,8 @@ Transform:
   m_LocalScale: {x: 27.632652, y: 30.127821, z: 2.3499775}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1463848194
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1463848198}
-  - component: {fileID: 1463848197}
-  - component: {fileID: 1463848196}
-  - component: {fileID: 1463848195}
-  m_Layer: 0
-  m_Name: Thought Pulse Trigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1463848195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1463848194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thought: {fileID: 1851388905660400, guid: af8cab17b12343e46abd8cfd37b6c4d0, type: 2}
-  playerCollider: {fileID: 97994195}
-  numberOfThoughts: 5
-  inspirationAlertText: {fileID: 551195628}
---- !u!65 &1463848196
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1463848194}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1463848197
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1463848194}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1463848198
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1463848194}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.14, y: 1.77, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1508847017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1981,7 @@ Transform:
   m_LocalScale: {x: 36.355953, y: 30.127821, z: 2.3499775}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1545429022
 GameObject:
@@ -2000,138 +2130,8 @@ Transform:
   m_LocalScale: {x: 4.938951, y: 2.567561, z: 2.3499775}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1964053078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1964053082}
-  - component: {fileID: 1964053081}
-  - component: {fileID: 1964053080}
-  - component: {fileID: 1964053079}
-  m_Layer: 0
-  m_Name: Thought Pulse Trigger (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1964053079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1964053078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thought: {fileID: 1851388905660400, guid: af8cab17b12343e46abd8cfd37b6c4d0, type: 2}
-  playerCollider: {fileID: 97994195}
-  numberOfThoughts: 5
-  inspirationAlertText: {fileID: 551195628}
---- !u!65 &1964053080
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1964053078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1964053081
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1964053078}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1964053082
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1964053078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.42, y: 1.48, z: -17.97}
-  m_LocalScale: {x: 6.145797, y: 3, z: 7.1222105}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2067146142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2067146146}
-  - component: {fileID: 2067146145}
-  - component: {fileID: 2067146144}
-  - component: {fileID: 2067146143}
-  m_Layer: 0
-  m_Name: Thought Pulse Trigger (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2067146143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067146142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec7a9a93034580479731e9cbff77755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thought: {fileID: 1851388905660400, guid: af8cab17b12343e46abd8cfd37b6c4d0, type: 2}
-  playerCollider: {fileID: 97994195}
-  numberOfThoughts: 5
-  inspirationAlertText: {fileID: 551195628}
---- !u!65 &2067146144
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067146142}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &2067146145
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067146142}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2067146146
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067146142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.3, y: 1.85, z: 4.62}
-  m_LocalScale: {x: 2.9753723, y: 2.9753733, z: 2.9753733}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083681955
 GameObject:
   m_ObjectHideFlags: 0
