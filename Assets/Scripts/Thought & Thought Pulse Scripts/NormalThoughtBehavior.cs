@@ -4,32 +4,34 @@ using UnityEngine;
 
 //This script determines how Thought objects will move,
 //and allows them to be collected
-public class ThoughtBehavior : MonoBehaviour
+public class NormalThoughtBehavior : MonoBehaviour
 {
-	//The rigidbody of the thought object
+	//The rigidbody of the Thought object
 	Rigidbody rbody;
 
-	//The player character; Commented out, in case it's needed later in development
-	//GameObject player;
+	//The collider of the Thought object
+	public Collider collide;
 
 	//The distance away from a thought object the player has to be
 	//in order to collect it
 	public float distanceToCollect;
 
-	//These floats are used to calculate how long a thought should
-	//exist before disappearing
+	//These floats are used to calculate how long a Thought should
+	//continue moving in the same random direction before changing
+	//to a new random direction
 	float timer;
-	public float timeToVanish;
+	public float timeToChangeDirection;
 
 	// Use this for initialization
 	void Start ()
 	{
-		//Commented out, in case it's needed later in development
-		//player = GameObject.Find ("Player");
-
 		rbody = this.GetComponent<Rigidbody> ();
 
 		timer = 0f;
+
+		//Randomly selects a random velocity and direction for the Thought 
+		//to start moving in
+		rbody.velocity = new Vector3 (Random.Range (-.5f, .5f), Random.Range (-.5f, .5f), Random.Range (-.5f, .5f));
 	}
 	
 	// Update is called once per frame
@@ -42,9 +44,9 @@ public class ThoughtBehavior : MonoBehaviour
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-			//Checks if the ray hit a Thought object
+			//Checks if the ray hit a Rogue Thought object
 			if (Physics.Raycast (ray, out hit, distanceToCollect)
-				&& hit.collider == this.GetComponent<Collider>()) {
+				&& hit.collider == collide) {
 
 				//Access the variable holding the score from the ScoreManager script 
 				//via the ScoreManager Singleton "Instance," and adds to it
@@ -56,21 +58,23 @@ public class ThoughtBehavior : MonoBehaviour
 
 			}
 		}
-
+	
 		//Ticks up the timer
 		timer += Time.deltaTime;
-
-		//If the timer reaches a certain value, the thought is destroyed
-		if (timer > timeToVanish) {
-			GameObject.Destroy (this.gameObject);
-		}
 	}
 
 	//Update called once every physics frame
 	void FixedUpdate ()
 	{
-		//Causes the Thought object to continually flutter around
-		//in a new random direction every physics frame
-		rbody.velocity = new Vector3 (Random.Range (-5, 5), Random.Range (-5, 5), Random.Range (-5, 5));
+
+		//Every time the timer reaches a certain value, this if-statement is triggered
+		if (timer <= timeToChangeDirection) {
+
+			//Randomly selects a new velocity and direction for the Thought to move in
+			rbody.velocity = new Vector3 (Random.Range (-.5f, .5f), Random.Range (-.5f, .5f), Random.Range (-.5f, .5f));
+
+			//Resets the timer
+			timer = 0;
+		}
 	}
 }
