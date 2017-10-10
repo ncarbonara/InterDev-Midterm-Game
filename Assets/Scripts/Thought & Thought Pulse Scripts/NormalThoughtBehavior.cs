@@ -31,7 +31,7 @@ public class NormalThoughtBehavior : MonoBehaviour
 
 		//Randomly selects a random velocity and direction for the Thought 
 		//to start moving in
-		rbody.velocity = new Vector3 (Random.Range (-.5f, .5f), Random.Range (-.5f, .5f), Random.Range (-.5f, .5f));
+		rbody.velocity = new Vector3 (Random.Range (-1.5f, 1.5f), Random.Range (-1.5f, 1.5f), Random.Range (-1.5f, 1.5f));
 	}
 	
 	// Update is called once per frame
@@ -46,16 +46,17 @@ public class NormalThoughtBehavior : MonoBehaviour
 
 			//Checks if the ray hit a Rogue Thought object
 			if (Physics.Raycast (ray, out hit, distanceToCollect)
-				&& hit.collider == collide) {
+			    && hit.collider == collide) {
 
 				//Access the variable holding the score from the ScoreManager script 
 				//via the ScoreManager Singleton "Instance," and adds to it
 				//when a Thought has been collected
 				ScoreManager.Instance.score++;
 
-				//Destroys the Thought once it has been collected
-				GameObject.Destroy (this.gameObject);
-
+				//Deactivates the Normal Thought once it has been used, so that it can't be used again.
+				//Unlike Inspiration Thoughts, Normal Thoughts aren't destroyed, because the script
+				//GameOverChecker needs to access them again.
+				this.gameObject.SetActive (false);
 			}
 		}
 	
@@ -71,10 +72,22 @@ public class NormalThoughtBehavior : MonoBehaviour
 		if (timer <= timeToChangeDirection) {
 
 			//Randomly selects a new velocity and direction for the Thought to move in
-			rbody.velocity = new Vector3 (Random.Range (-.5f, .5f), Random.Range (-.5f, .5f), Random.Range (-.5f, .5f));
+			rbody.velocity = new Vector3 (Random.Range (-1.5f, 1.5f), Random.Range (-1.5f, 1.5f), Random.Range (-1.5f, 1.5f));
 
 			//Resets the timer
 			timer = 0;
+		}
+
+		//Keeps the Thought from getting too close to the ground
+		if (this.GetComponent<Transform> ().position.y < 1f) {
+
+			//Gets the X and Z coordinates of the Thought, which will be put back into
+			//it's position
+			float xPos = this.GetComponent<Transform> ().position.x;
+			float zPos = this.GetComponent<Transform> ().position.z;
+
+			//Moves the thought object to where it should be
+			this.GetComponent<Transform> ().position = new Vector3 (xPos, 1f, zPos);
 		}
 	}
 }

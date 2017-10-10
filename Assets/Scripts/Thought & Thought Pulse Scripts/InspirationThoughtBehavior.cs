@@ -4,19 +4,19 @@ using UnityEngine;
 
 //This script determines how Thought objects will move,
 //and allows them to be collected
-public class RogueThoughtBehavior : MonoBehaviour
+public class InspirationThoughtBehavior : MonoBehaviour
 {
-	//The rigidbody of the Rogue Thought object
+	//The rigidbody of the Inspiration Thought object
 	Rigidbody rbody;
 
-	//The collider of the Rogue Thought object
+	//The collider of the Inspiration Thought object
 	public Collider collide;
 
 	//The distance away from a thought object the player has to be
 	//in order to collect it
 	public float distanceToCollect;
 
-	//These floats are used to calculate how long a Rogue Thought should
+	//These floats are used to calculate how long a Inspiration Thought should
 	//exist before disappearing
 	float timer;
 	public float timeToVanish;
@@ -39,7 +39,7 @@ public class RogueThoughtBehavior : MonoBehaviour
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-			//Checks if the ray hit a Rogue Thought object
+			//Checks if the ray hit a Inspiration Thought object
 			if (Physics.Raycast (ray, out hit, distanceToCollect)
 				&& hit.collider == collide) {
 
@@ -66,8 +66,21 @@ public class RogueThoughtBehavior : MonoBehaviour
 	//Update called once every physics frame
 	void FixedUpdate ()
 	{
-		//Causes the Rogue Thought object to continually flutter around
+		//Causes the Inspiration Thought object to continually flutter around
 		//in a new random direction every physics frame
 		rbody.velocity = new Vector3 (Random.Range (-5, 5), Random.Range (-2, 2), Random.Range (-5, 5));
+
+		//Keeps the Thought from getting too close to the ground
+		if (this.GetComponent<Transform>().position.y < 1f) {
+
+			//Gets the X and Z coordinates of the Thought, which will be put back into
+			//it's position
+			float xPos = this.GetComponent<Transform>().position.x;
+			float zPos = this.GetComponent<Transform>().position.z;
+
+			//Moves the thought object to where it should be
+			this.GetComponent<Transform>().position = new Vector3 (xPos, 1f, zPos);
 		}
+	}
 }
+

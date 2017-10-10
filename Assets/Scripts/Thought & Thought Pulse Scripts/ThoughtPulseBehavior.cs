@@ -25,38 +25,37 @@ public class ThoughtPulseBehavior : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		triggerPosition = this.GetComponent<Transform>().position;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		
+		triggerPosition = this.GetComponent<Transform> ().position;
 	}
 
-	//OnTriggerEnter only activates if it is being triggered by the player's collider
-	void OnTriggerEnter (Collider playerCollider)
+	//Checks for collisions with the trigger
+	void OnTriggerEnter (Collider col)
 	{
-		//Causes the inspiration altert text to appear onscreen
-		inspirationAlertText.SetActive(true);
 
-		//A loop that instantiates one thought object for 
-		for (int i = 0; i < numberOfThoughts; i++) {
+		//Only activates if the player has entered the collider
+		if (col.gameObject.name == playerCollider.gameObject.name) {
+			
+			//Causes the inspiration altert text to appear onscreen
+			inspirationAlertText.SetActive (true);
+
+			//A loop that instantiates one thought object for 
+			for (int i = 0; i < numberOfThoughts; i++) {
 		
-			//The following three floats are used spawn the Thought objects at 
-			//random distances from the center of the trigger,
-			//Rather than directly at it's center
-			float randomSpawnOffsetX = Random.Range (-2, 2);
-			float randomSpawnOffsetY = Random.Range (-2, 2);
-			float randomSpawnOffsetZ = Random.Range (-2, 2);
+				//The following three floats are used spawn the Thought objects at 
+				//random distances from the center of the trigger,
+				//Rather than directly at it's center
+				float randomSpawnOffsetX = Random.Range (-2, 2);
+				float randomSpawnOffsetY = Random.Range (-2, 2);
+				float randomSpawnOffsetZ = Random.Range (-2, 2);
 
-			//Spawns a new thought object
-			Instantiate (thought, new Vector3(triggerPosition.x + randomSpawnOffsetX, 
-				triggerPosition.y + randomSpawnOffsetY, 
-				triggerPosition.z + randomSpawnOffsetZ), Quaternion.identity);
+				//Spawns a new thought object
+				Instantiate (thought, new Vector3 (triggerPosition.x + randomSpawnOffsetX, 
+					triggerPosition.y + randomSpawnOffsetY, 
+					triggerPosition.z + randomSpawnOffsetZ), Quaternion.identity);
+			}
+
+			//Destroys the trigger once it has been used, so that it can't be used again
+			this.gameObject.SetActive (false);
 		}
-
-		//Destroys the trigger once it has been used, so that it can't be used again
-		this.gameObject.SetActive (false);
 	}
 }
