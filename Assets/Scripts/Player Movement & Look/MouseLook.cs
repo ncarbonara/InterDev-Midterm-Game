@@ -17,17 +17,19 @@ public class MouseLook : MonoBehaviour {
 		float mouseX = Input.GetAxis ("Mouse X");	//Also from -1 to 1, not in screen coords
 		float mouseY = Input.GetAxis ("Mouse Y");
 
+		Vector2 mouseVector2 = Camera.main.ScreenToViewportPoint (new Vector3 (mouseX, mouseY, 0));
+
 		//These are the axes you're rotating ABOUT, that's why x is in y and y is in x
 
 		//Horizontal rotation:
-		transform.parent.Rotate(0f, mouseX * Time.deltaTime * mouseSensitivity, 0f);	//Character rotates with left/right
+		transform.parent.Rotate(0f, mouseVector2.x * Time.deltaTime * mouseSensitivity, 0f);	//Character rotates with left/right
 
 		//Standard vertical rotation:
-		//transform.Rotate (-mouseY * Time.deltaTime * mouseSensitivity, 0f, 0f);		//Up/Down only rotates camera
+		//transform.Rotate (-mouseVector2.y * Time.deltaTime * mouseSensitivity, 0f, 0f);		//Up/Down only rotates camera
 
 		//Clamped vertical rotation:
 		//FOOD FOR THOUGHT: Did this save my mouse reappearing problem?
-		verticalLook -= mouseY * Time.deltaTime * mouseSensitivity;
+		verticalLook -= mouseVector2.y * Time.deltaTime * mouseSensitivity;
 		verticalLook = Mathf.Clamp (verticalLook, -85f, 85f);
 
 		//Z override: To stop the camera from rolling around the z axis

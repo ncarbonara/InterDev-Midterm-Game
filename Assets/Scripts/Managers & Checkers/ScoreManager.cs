@@ -36,6 +36,6 @@ public class ScoreManager : MonoBehaviour {
 	void Update () {
 
 		//Updates the score text, in case another script has changed the score
-		scoreText.GetComponent<Text> ().text = ("Notebook Score: " + score);
+		scoreText.GetComponent<TextMesh> ().text = ("Notebook\nScore: " + score);
 	}
 }
