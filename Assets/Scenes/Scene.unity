@@ -1081,15 +1081,17 @@ MonoBehaviour:
     exciting ideas will come to you today...
 
 
-    Explore to find THOUGHTS, and click on them to write them down to earn points.
+    Explore to find THOUGHTS, and click on them to collect them in your idea notebook
+    to earn points.
 
 
-    Sometimes, INSPIRATION will strike and you''ll have several ROGUE THOUGHTS appear
-    around you. These are worth more points, but quickly.
+    Sometimes, INSPIRATION will strike and you''ll have several INSPIRATION THOUGHTS
+    appear around you. These are worth more points, but DISAPPEAR after a moment.
+    A flurry of inspiration is hard to remember!
 
 
-    The game ends when there are no more thoughts to collect. Write down as many as
-    you can!'
+    The game ends when there are no more thoughts to collect. Catch as many as you
+    can!'
 --- !u!222 &543511987
 CanvasRenderer:
   m_ObjectHideFlags: 0
