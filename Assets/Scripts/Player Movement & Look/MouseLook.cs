@@ -17,7 +17,7 @@ public class MouseLook : MonoBehaviour {
 		float mouseX = Input.GetAxis ("Mouse X");	//Also from -1 to 1, not in screen coords
 		float mouseY = Input.GetAxis ("Mouse Y");
 
-		Vector2 mouseVector2 = Camera.main.ScreenToViewportPoint (new Vector3 (mouseX, mouseY, 0));
+		Vector2 mouseVector2 = Camera.main.ScreenToViewportPoint (new Vector2 (mouseX, mouseY));
 
 		//These are the axes you're rotating ABOUT, that's why x is in y and y is in x
 
