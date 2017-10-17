@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;	//Allows this script to talk to UI text
+
 //This script determines how Thought objects will move,
 //and allows them to be collected
 public class InspirationThoughtBehavior : MonoBehaviour
@@ -21,32 +23,45 @@ public class InspirationThoughtBehavior : MonoBehaviour
 	float timer;
 	public float timeToVanish;
 
+	//This is the reticile GameObject, which changes color when the player is within
+	//pickup range of a Thought object
+	public GameObject reticle;
+
 	// Use this for initialization
 	void Start ()
 	{
 		rbody = this.GetComponent<Rigidbody> ();
 
 		timer = 0f;
+
+		//Specifies what "reticle" is
+		reticle = GameObject.Find("Reticle");
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		//Checks if the player is clicking to collect an object
-		if (Input.GetKey (KeyCode.Mouse0)) {
-		
-			//Generates a ray out from the camera
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		//Generates a ray out from the camera
+		RaycastHit hit;
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-			//Checks if the ray hit a Inspiration Thought object
-			if (Physics.Raycast (ray, out hit, distanceToCollect)
-				&& hit.collider == collide) {
+		//Checks if the ray hit a Inspiration Thought object
+		if (Physics.Raycast (ray, out hit, distanceToCollect)
+		     && hit.collider == collide) {
+
+			//Changes the reticle color
+			reticle.GetComponent<Text> ().color = Color.red;
+
+			//Checks if the player is clicking to collect an object
+			if (Input.GetKey (KeyCode.Mouse0)) {
 
 				//Access the variable holding the score from the ScoreManager script 
 				//via the ScoreManager Singleton "Instance," and adds to it
 				//when a Thought has been collected
 				ScoreManager.Instance.score += 3;
+
+				//Returns the reticle to it's normal color
+				reticle.GetComponent<Text> ().color = Color.black;
 
 				//Destroys the Thought once it has been collected
 				GameObject.Destroy (this.gameObject);
@@ -71,15 +86,15 @@ public class InspirationThoughtBehavior : MonoBehaviour
 		rbody.velocity = new Vector3 (Random.Range (-5, 5), Random.Range (-2, 2), Random.Range (-5, 5));
 
 		//Keeps the Thought from getting too close to the ground
-		if (this.GetComponent<Transform>().position.y < 1f) {
+		if (this.GetComponent<Transform> ().position.y < 1f) {
 
 			//Gets the X and Z coordinates of the Thought, which will be put back into
 			//it's position
-			float xPos = this.GetComponent<Transform>().position.x;
-			float zPos = this.GetComponent<Transform>().position.z;
+			float xPos = this.GetComponent<Transform> ().position.x;
+			float zPos = this.GetComponent<Transform> ().position.z;
 
 			//Moves the thought object to where it should be
-			this.GetComponent<Transform>().position = new Vector3 (xPos, 1f, zPos);
+			this.GetComponent<Transform> ().position = new Vector3 (xPos, 1f, zPos);
 		}
 	}
 }

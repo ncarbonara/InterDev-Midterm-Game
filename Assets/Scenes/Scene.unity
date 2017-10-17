@@ -477,6 +477,7 @@ MonoBehaviour:
   collide: {fileID: 1366849517}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &253142269
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +650,7 @@ MonoBehaviour:
   collide: {fileID: 1713500516}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &321066482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1058,7 @@ MonoBehaviour:
   collide: {fileID: 1303451383}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!64 &506065950 stripped
 MeshCollider:
   m_PrefabParentObject: {fileID: 64046053447930982, guid: 79b9b25013d29974fa2a8feca8963e66,
@@ -1080,6 +1083,7 @@ MonoBehaviour:
   collide: {fileID: 611232989}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &543511984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1740,7 @@ MonoBehaviour:
   collide: {fileID: 506065950}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1001 &745310605
 Prefab:
   m_ObjectHideFlags: 0
@@ -2241,6 +2246,7 @@ MonoBehaviour:
   collide: {fileID: 1207136310}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &905749091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,6 +2754,7 @@ MonoBehaviour:
   collide: {fileID: 432539073}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!64 &1207136310 stripped
 MeshCollider:
   m_PrefabParentObject: {fileID: 64046053447930982, guid: 79b9b25013d29974fa2a8feca8963e66,
@@ -3525,6 +3532,7 @@ MonoBehaviour:
   collide: {fileID: 62792461}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &1787409389 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1426698639976238, guid: 79b9b25013d29974fa2a8feca8963e66,
@@ -3544,6 +3552,7 @@ MonoBehaviour:
   collide: {fileID: 982817874}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &1903615777 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1426698639976238, guid: 79b9b25013d29974fa2a8feca8963e66,
@@ -3563,6 +3572,7 @@ MonoBehaviour:
   collide: {fileID: 548373920}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &1908566261 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1426698639976238, guid: 79b9b25013d29974fa2a8feca8963e66,
@@ -3582,6 +3592,7 @@ MonoBehaviour:
   collide: {fileID: 872531614}
   distanceToCollect: 8
   timeToChangeDirection: 5
+  reticle: {fileID: 321066482}
 --- !u!1 &1913415552
 GameObject:
   m_ObjectHideFlags: 0
