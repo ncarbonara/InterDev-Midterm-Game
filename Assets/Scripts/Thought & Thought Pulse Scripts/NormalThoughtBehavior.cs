@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;	//Allows this script to talk to UI text
+
 //This script determines how Thought objects will move,
 //and allows them to be collected
 public class NormalThoughtBehavior : MonoBehaviour
@@ -22,6 +24,10 @@ public class NormalThoughtBehavior : MonoBehaviour
 	float timer;
 	public float timeToChangeDirection;
 
+	//This is the reticile GameObject, which changes color when the player is within
+	//pickup range of a Thought object
+	public GameObject reticle;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,16 +43,19 @@ public class NormalThoughtBehavior : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		//Checks if the player is clicking to collect an object
-		if (Input.GetKey (KeyCode.Mouse0)) {
-		
-			//Generates a ray out from the camera
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		//Generates a ray out from the camera
+		RaycastHit hit;
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-			//Checks if the ray hit a Rogue Thought object
-			if (Physics.Raycast (ray, out hit, distanceToCollect)
-			    && hit.collider == collide) {
+		//Checks if the ray hit a Rogue Thought object
+		if (Physics.Raycast (ray, out hit, distanceToCollect)
+		    && hit.collider == collide) {
+
+			//Changes the reticle color
+			reticle.GetComponent<Text> ().color = Color.red;
+
+			//Checks if the player is clicking to collect an object
+			if (Input.GetKey (KeyCode.Mouse0)) {
 
 				//Access the variable holding the score from the ScoreManager script 
 				//via the ScoreManager Singleton "Instance," and adds to it
@@ -57,6 +66,9 @@ public class NormalThoughtBehavior : MonoBehaviour
 				//Unlike Inspiration Thoughts, Normal Thoughts aren't destroyed, because the script
 				//GameOverChecker needs to access them again.
 				this.gameObject.SetActive (false);
+
+				//Returns the reticle to it's normal color
+				reticle.GetComponent<Text> ().color = Color.black;
 			}
 		}
 	
