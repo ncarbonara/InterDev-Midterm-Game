@@ -311,5 +311,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 64046053447930982}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToVanish: 5

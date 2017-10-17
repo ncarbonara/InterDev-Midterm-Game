@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 1366849517}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &253142269
 GameObject:
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 1713500516}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &321066482
 GameObject:
@@ -797,15 +797,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.66
+      value: 22.02
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.8
+      value: 6.72
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -829,15 +829,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3445368
+      value: 2.374373
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3445368
+      value: 2.3743734
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.3445368
+      value: 2.3743734
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fa6f82e4d019045a1a5ffc06df59d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 75000
+  mouseSensitivity: 10000
 --- !u!64 &432539073 stripped
 MeshCollider:
   m_PrefabParentObject: {fileID: 64046053447930982, guid: 79b9b25013d29974fa2a8feca8963e66,
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 1303451383}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!64 &506065950 stripped
 MeshCollider:
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 611232989}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &543511984
 GameObject:
@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 506065950}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1001 &745310605
 Prefab:
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 1207136310}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &905749091
 GameObject:
@@ -2737,7 +2737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 432539073}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!64 &1207136310 stripped
 MeshCollider:
@@ -3083,24 +3083,6 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 64046053447930982, guid: 79b9b25013d29974fa2a8feca8963e66,
     type: 2}
   m_PrefabInternal: {fileID: 547059000}
---- !u!1 &1370338388 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100052, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
-  m_PrefabInternal: {fileID: 417662741}
---- !u!64 &1370338390
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1370338388}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
 --- !u!1 &1409470403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,24 +3251,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1545165317 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100006, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
-  m_PrefabInternal: {fileID: 417662741}
---- !u!64 &1545165319
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545165317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: b6aea6fdbfb6618429c2b2d10aae280c, type: 3}
 --- !u!1 &1545429022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,7 +3514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 62792461}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &1787409389 stripped
 GameObject:
@@ -3569,7 +3533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 982817874}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &1903615777 stripped
 GameObject:
@@ -3588,7 +3552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 548373920}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &1908566261 stripped
 GameObject:
@@ -3607,7 +3571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collide: {fileID: 872531614}
-  distanceToCollect: 5
+  distanceToCollect: 8
   timeToChangeDirection: 5
 --- !u!1 &1913415552
 GameObject:
@@ -3632,7 +3596,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1913415552}
-  m_LocalRotation: {x: 0.12993683, y: 0.88574886, z: -0.088075936, w: 0.43681565}
+  m_LocalRotation: {x: 0.12993684, y: 0.8857489, z: -0.08807594, w: 0.43681568}
   m_LocalPosition: {x: -1.6503283, y: 2.0543442, z: -0.032147143}
   m_LocalScale: {x: 2.862034, y: 2.6993492, z: 2.8572202}
   m_Children: []
