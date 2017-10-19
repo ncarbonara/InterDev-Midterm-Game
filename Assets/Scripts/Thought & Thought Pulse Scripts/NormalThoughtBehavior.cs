@@ -33,8 +33,6 @@ public class NormalThoughtBehavior : MonoBehaviour
 	{
 		rbody = this.GetComponent<Rigidbody> ();
 
-		timer = 0f;
-
 		//Randomly selects a random velocity and direction for the Thought 
 		//to start moving in
 		rbody.velocity = new Vector3 (Random.Range (-1.5f, 1.5f), Random.Range (-1.5f, 1.5f), Random.Range (-1.5f, 1.5f));
@@ -60,7 +58,7 @@ public class NormalThoughtBehavior : MonoBehaviour
 				//Access the variable holding the score from the ScoreManager script 
 				//via the ScoreManager Singleton "Instance," and adds to it
 				//when a Thought has been collected
-				ScoreManager.Instance.score++;
+				GameManager.Instance.score++;
 
 				//Deactivates the Normal Thought once it has been used, so that it can't be used again.
 				//Unlike Inspiration Thoughts, Normal Thoughts aren't destroyed, because the script
@@ -72,8 +70,11 @@ public class NormalThoughtBehavior : MonoBehaviour
 			}
 		}
 	
-		//Ticks up the timer
-		timer += Time.deltaTime;
+		//Removes the Thought from the scene when the game timer has run to zero,
+		//as determined in the game manager
+		if (GameManager.Instance.timesUp == true) {
+			this.gameObject.SetActive (false);
+		}
 	}
 
 	//Update called once every physics frame

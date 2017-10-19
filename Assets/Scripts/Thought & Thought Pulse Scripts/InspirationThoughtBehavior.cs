@@ -20,7 +20,7 @@ public class InspirationThoughtBehavior : MonoBehaviour
 
 	//These floats are used to calculate how long a Inspiration Thought should
 	//exist before disappearing
-	float timer;
+	float thoughtTimer;
 	public float timeToVanish;
 
 	//This is the reticile GameObject, which changes color when the player is within
@@ -32,7 +32,7 @@ public class InspirationThoughtBehavior : MonoBehaviour
 	{
 		rbody = this.GetComponent<Rigidbody> ();
 
-		timer = 0f;
+		thoughtTimer = 0f;
 
 		//Specifies what "reticle" is
 		reticle = GameObject.Find("Reticle");
@@ -58,7 +58,7 @@ public class InspirationThoughtBehavior : MonoBehaviour
 				//Access the variable holding the score from the ScoreManager script 
 				//via the ScoreManager Singleton "Instance," and adds to it
 				//when a Thought has been collected
-				ScoreManager.Instance.score += 3;
+				GameManager.Instance.score += 3;
 
 				//Returns the reticle to it's normal color
 				reticle.GetComponent<Text> ().color = Color.black;
@@ -70,11 +70,17 @@ public class InspirationThoughtBehavior : MonoBehaviour
 		}
 
 		//Ticks up the timer
-		timer += Time.deltaTime;
+		thoughtTimer += Time.deltaTime;
 
-		//If the timer reaches a certain value, the thought is destroyed
-		if (timer > timeToVanish) {
+		//If the THOUGHT TIMER reaches a certain value, the thought is destroyed
+		if (thoughtTimer > timeToVanish) {
 			GameObject.Destroy (this.gameObject);
+		}
+
+		//Removes the Thought from the scene when the GAME TIMER has run to zero,
+		//as determined in the game manager
+		if (GameManager.Instance.timesUp == true) {
+			this.gameObject.SetActive (false);
 		}
 	}
 
