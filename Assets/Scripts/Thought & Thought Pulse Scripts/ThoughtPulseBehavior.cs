@@ -38,7 +38,7 @@ public class ThoughtPulseBehavior : MonoBehaviour
 			//Causes the inspiration altert text to appear onscreen
 			inspirationAlertText.SetActive (true);
 
-			//A loop that instantiates one thought object for 
+			//A loop that instantiates each inspiration thought
 			for (int i = 0; i < numberOfThoughts; i++) {
 		
 				//The following three floats are used spawn the Thought objects at 

@@ -141,5 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc4d1452bda4d845bcf37023083ebfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collide: {fileID: 0}
   distanceToCollect: 5
   timeToVanish: 5
+  reticle: {fileID: 0}

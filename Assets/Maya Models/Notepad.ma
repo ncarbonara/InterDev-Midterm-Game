@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Notepad.ma
-//Last modified: Mon, Oct 23, 2017 01:24:51 AM
+//Last modified: Mon, Oct 23, 2017 02:50:35 AM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";

@@ -52,11 +52,14 @@ public class GameManager : MonoBehaviour {
 			timer -= Time.deltaTime;
 		}
 
+		//Rounds the timer to an int that looks nicer onscreen
+		int roundedTimer = Mathf.RoundToInt(timer);
+
 		//Updates the score text, in case another script has changed the score
-		scoreText.GetComponent<TextMesh> ().text = ("Notebook\nScore: " + score);
+		scoreText.GetComponent<TextMesh> ().text = ("Score: " + score);
 
 		//Updates the timer text
-		timerText.GetComponent<TextMesh> ().text = ("Time\nLeft: " + timer);
+		timerText.GetComponent<TextMesh> ().text = ("Time: " + roundedTimer);
 
 		//Displays the game over text when time has run out
 		if (timer <= 0f) {
