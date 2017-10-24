@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour {
 
-	float verticalLook = 0f;	//Remembers our vertical mouse look
+	//Remembers our vertical mouse look
+	float verticalLook = 0f;
+
+	//A value tracking how sensitive the mouse is
 	public float mouseSensitivity;
 
 	// Use this for initialization
@@ -14,7 +17,9 @@ public class MouseLook : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float mouseX = Input.GetAxis ("Mouse X");	//Also from -1 to 1, not in screen coords
+
+		//Checks how much the mouse is being moved both horizontally and vertically
+		float mouseX = Input.GetAxis ("Mouse X");	//Ranges rom -1 to 1, not in screen coords
 		float mouseY = Input.GetAxis ("Mouse Y");
 
 		Vector2 mouseVector2 = Camera.main.ScreenToViewportPoint (new Vector2 (mouseX, mouseY));

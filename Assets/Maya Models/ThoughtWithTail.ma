@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: ThoughtWithTail.ma
-//Last modified: Mon, Oct 23, 2017 07:55:45 PM
+//Last modified: Mon, Oct 23, 2017 11:20:03 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
