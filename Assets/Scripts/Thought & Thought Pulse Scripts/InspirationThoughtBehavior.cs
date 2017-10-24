@@ -8,6 +8,8 @@ using UnityEngine.UI;	//Allows this script to talk to UI text
 //and allows them to be collected
 public class InspirationThoughtBehavior : MonoBehaviour
 {
+
+
 	//The rigidbody of the Inspiration Thought object
 	Rigidbody rbody;
 
@@ -23,6 +25,11 @@ public class InspirationThoughtBehavior : MonoBehaviour
 	float thoughtTimer;
 	public float timeToVanish;
 
+	//A variable altered by the thought pulse behavior script to let a thought know when it's
+	//lifetime should start counting down. This occurs after a player has walked into a thought pulse trigger
+	//and caused a bunch of Inspiration Thoughts to appear around them
+	public bool startTimer;
+
 	//This is the reticile GameObject, which changes color when the player is within
 	//pickup range of a Thought object
 	public GameObject reticle;
@@ -36,6 +43,10 @@ public class InspirationThoughtBehavior : MonoBehaviour
 
 		//Specifies what "reticle" is
 		reticle = GameObject.Find("Reticle");
+
+		//Makes sure that this Inspiration Thought object stays out of the play space until
+		//the player steps into a thought pulse trigger
+		//this.GetComponent<Transform> ().position = new Vector3 (0f, -100f, 0f);
 	}
 	
 	// Update is called once per frame
@@ -69,8 +80,14 @@ public class InspirationThoughtBehavior : MonoBehaviour
 			}
 		}
 
-		//Ticks up the timer
-		thoughtTimer += Time.deltaTime;
+		//Makes sure the Inspiration has been summoned to a thought pulse trigger.
+		//before it's lifetime starts counting down. It would be pointless for the thought to
+		//be destroyed before the player ever encounters it.
+		if (startTimer == true) {
+			
+			//Ticks up the timer
+			thoughtTimer += Time.deltaTime;
+		}
 
 		//If the THOUGHT TIMER reaches a certain value, the thought is destroyed
 		if (thoughtTimer > timeToVanish) {
